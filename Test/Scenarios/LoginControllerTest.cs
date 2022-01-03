@@ -26,7 +26,7 @@ namespace Test.Scenarios
         [Fact, TestPriority(0)]
         public async Task SignUp_ReturnsOkResponse()
         {
-            var body = new InputModelUser() { name = "Guilherme", lastName = "Rocha", email = "gui@gmail.com", password = "Teste123", cpf = "430.164.198-07"};
+            var body = new InputModelUser() { name = "Guilherme", lastName = "Rocha", email = "gui@gmail.com", password = "Teste123", cpf = "661.345.778-71"};
 
             var content = JsonContent.Create<InputModelUser>(body);
 
@@ -53,7 +53,7 @@ namespace Test.Scenarios
 
             foreach (var invalid in invalidNames)
             {
-                var body = new InputModelUser() { name = invalid, lastName = "Rocha", email = "gui@gmail.com", password = "Teste123", cpf = "430.164.198-07" };
+                var body = new InputModelUser() { name = invalid, lastName = "Rocha", email = "gui@gmail.com", password = "Teste123", cpf = "661.345.778-71" };
 
                 var content = JsonContent.Create<InputModelUser>(body);
 
@@ -74,7 +74,7 @@ namespace Test.Scenarios
 
             foreach (var invalid in invalidLastNames)
             {
-                var body = new InputModelUser() { name = "Guilherme", lastName = invalid, email = "gui@gmail.com", password = "Teste123", cpf = "430.164.198-07" };
+                var body = new InputModelUser() { name = "Guilherme", lastName = invalid, email = "gui@gmail.com", password = "Teste123", cpf = "661.345.778-71" };
 
                 var content = JsonContent.Create<InputModelUser>(body);
 
@@ -116,7 +116,7 @@ namespace Test.Scenarios
 
             foreach (var invalid in invalidEmails)
             {
-                var body = new InputModelUser() { name = "Guilherme", lastName = "Rocha", email = invalid, password = "Teste123", cpf = "430.164.198-07" };
+                var body = new InputModelUser() { name = "Guilherme", lastName = "Rocha", email = invalid, password = "Teste123", cpf = "661.345.778-71" };
 
                 var content = JsonContent.Create<InputModelUser>(body);
 
@@ -137,7 +137,7 @@ namespace Test.Scenarios
 
             foreach (var invalid in invalidPasswords)
             {
-                var body = new InputModelUser() { name = "Guilherme", lastName = "Rocha", email = "gui@gmail.com", password = invalid, cpf = "430.164.198-07" };
+                var body = new InputModelUser() { name = "Guilherme", lastName = "Rocha", email = "gui@gmail.com", password = invalid, cpf = "661.345.778-71" };
 
                 var content = JsonContent.Create<InputModelUser>(body);
 
@@ -154,7 +154,7 @@ namespace Test.Scenarios
         [Fact, TestPriority(1)]
         public async Task SignUp_User_Invalid_ReturnsUnprocessableRequest()
         {
-            var body = new InputModelUser() { name = "Guilherme", lastName = "Rocha", email = "gui@gmail.com", password = "Teste123", cpf = "430.164.198-07" };
+            var body = new InputModelUser() { name = "Guilherme", lastName = "Rocha", email = "gui@gmail.com", password = "Teste123", cpf = "661.345.778-71" };
 
             var content = JsonContent.Create<InputModelUser>(body);
 
@@ -172,7 +172,7 @@ namespace Test.Scenarios
         public async Task SignUp_User_Invalid_ReturnsBadRequest()
         {
 
-            var body = new InputModelUser() { name = "Gu", lastName = "S", email = "gui.com", password = "Teste1", cpf = "430.164.198-0A" };
+            var body = new InputModelUser() { name = "Gu", lastName = "S", email = "gui.com", password = "Teste1", cpf = "661.345.778-71A" };
 
             var content = JsonContent.Create<InputModelUser>(body);
 
